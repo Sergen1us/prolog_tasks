@@ -1,0 +1,14 @@
+rel(X, Y):- X < Y.
+zero(X):- X =:= 0.
+nod(X, Y, Z):-
+    XmY is X mod Y,
+    YmX is Y mod X,
+    (   
+    zero(XmY), Z is Y, !;
+    zero(YmX), Z is X, !;
+    rel(X,Y), nod(X, XmY, Z);
+    not(rel(X,Y)), nod(XmY, Y, Z)
+    ).
+nok(X, Y, Z):-
+    nod(X, Y, R),
+    Z is X*Y/R.

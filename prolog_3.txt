@@ -1,0 +1,7 @@
+lp(X, Y):- Y is X*X.
+for(I, N):-
+    I is N,!;
+    I<N,
+    lp(I,Y), write('-'), write(Y), write(' logic points'), write("\n"),
+    I1 is I+1,
+    for(I1, N).
