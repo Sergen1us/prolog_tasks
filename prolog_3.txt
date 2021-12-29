@@ -5,3 +5,9 @@ for(I, N):-
     lp(I,Y), write('-'), write(Y), write(' logic points'), write("\n"),
     I1 is I+1,
     for(I1, N).
+
+%Пример: for(0,3).
+         %-0 logic points
+         %-1 logic points
+         %-4 logic points
+         %-9 logic points
