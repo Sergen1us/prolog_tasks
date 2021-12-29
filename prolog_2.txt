@@ -12,3 +12,6 @@ nod(X, Y, Z):-
 nok(X, Y, Z):-
     nod(X, Y, R),
     Z is X*Y/R.
+   
+%Пример: nok(2,6,N).
+        %N = 6
