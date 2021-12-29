@@ -5,3 +5,6 @@ del(_,N,[]):- N =:= 0, !.
 del([X|Tail_1], _num,[X|Tail_2]):-_num1 is _num - 1, del(Tail_1, _num1, Tail_2).
 q(L , X, L1):- count_size(L, N), _num is N - X, del(L, _num, L1).
 
+%Пример: q([1,2,3,4,5,6], 2, N).
+        %N = [1,2,3,4]
+
