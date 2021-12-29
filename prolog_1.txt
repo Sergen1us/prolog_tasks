@@ -3,3 +3,6 @@ full_check(X, Y):- check(X), Y is X, !.
 full_check(X, Y):- not(check(X)), Y is X - 1, !.
 get_num(X, N):- N is (X+1)/2.
 sum(N, S):- full_check(N, Y), get_num(Y, X), S is X*X.
+
+%Пример: sum(5, N).
+        N = 9.
